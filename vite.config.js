@@ -6,7 +6,15 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'), // This allows you to use '@/components/Contact' as an import path
+      '@': path.resolve(__dirname, 'src'),
     },
+  },
+  optimizeDeps: {
+    include: [
+      '@chakra-ui/react',
+      '@emotion/react',
+      '@emotion/styled',
+      'framer-motion'
+    ],
   },
 });
