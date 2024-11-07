@@ -1,16 +1,15 @@
-:root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-  }
-  
-  body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-  }
-  
-  /* Dark theme variables */
-  body.dark-theme {
-    --bg-color: #0e0c15;
-    --text-color: #ffffff;
-  }
-  
+/* src/styles/index.css */
+body {
+  background-color: #ffffff !important; /* Light theme background */
+  color: #000000 !important; /* Light theme text */
+}
+
+body.dark {
+  background-color: #000000 !important; /* Dark theme background */
+  color: #ffffff !important; /* Dark theme text */
+}
+
+/* Ensure <p> elements follow the theme */
+p {
+  color: inherit; /* This makes <p> inherit the body text color */
+}

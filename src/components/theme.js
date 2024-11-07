@@ -1,14 +1,17 @@
 // src/components/theme.js
+
 export const lightTheme = {
-  background: "#ffffff",
+  background: "#FFFFFF",
   text: "#000000",
   primary: "#007bff",
-  // Add other colors as needed
+  secondary: "#FFC876",
+  // Additional theme properties as needed
 };
 
 export const darkTheme = {
   background: "#121212",
-  text: "#ffffff",
+  text: "#FFFFFF",
   primary: "#bb86fc",
-  // Add other colors as needed
+  secondary: "#FF98E2",
+  // Additional theme properties as needed
 };

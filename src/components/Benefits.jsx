@@ -1,3 +1,5 @@
+// src/components/Benefits.jsx
+
 import React from "react";
 import Slider from "react-slick";
 import Heading from "./Heading";
@@ -6,13 +8,13 @@ import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
 import { benefits } from "../constants";
-
-// Import the slick-carousel CSS files
+import { useTheme } from "@emotion/react"; // Import useTheme hook
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Benefits = () => {
-  // Slider settings
+  const theme = useTheme(); // Access the theme
+
   const settings = {
     dots: true,
     infinite: true,
@@ -20,9 +22,7 @@ const Benefits = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    customPaging: (i) => (
-      <div className="dot"></div>
-    ),
+    customPaging: (i) => <div className="dot"></div>,
     dotsClass: "slick-dots custom-dots",
     responsive: [
       {
@@ -43,11 +43,17 @@ const Benefits = () => {
   };
 
   return (
-    <Section id="benefits">
+    <Section
+      id="benefits"
+      style={{
+        backgroundColor: theme.background,
+        color: theme.text,
+      }}
+    >
       <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-2xl"
-          title="Imagine the world’s knowledge mapped in one environment that is accessible to all with learning pathways customized to each   "
+          title="Imagine the world’s knowledge mapped in one environment that is accessible to all with learning pathways customized to each"
         />
         <Slider {...settings}>
           {benefits.map((item) => (
@@ -56,11 +62,14 @@ const Benefits = () => {
                 className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
                 style={{
                   backgroundImage: `url(${item.backgroundUrl})`,
+                  backgroundColor: theme.secondary,
                 }}
               >
                 <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                   <h5 className="h5 mb-5">{item.title}</h5>
-                  <p className="body-2 mb-6 text-n-3">{item.text}</p>
+                  <p className="body-2 mb-6" style={{ color: theme.text }}>
+                    {item.text}
+                  </p>
                   <div className="flex items-center mt-auto">
                     <img
                       src={item.iconUrl}
@@ -68,7 +77,10 @@ const Benefits = () => {
                       height={48}
                       alt={item.title}
                     />
-                    <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                    <p
+                      className="ml-auto font-code text-xs font-bold uppercase tracking-wider"
+                      style={{ color: theme.primary }}
+                    >
                       Explore more
                     </p>
                     <Arrow />
@@ -78,8 +90,11 @@ const Benefits = () => {
                 {item.light && <GradientLight />}
 
                 <div
-                  className="absolute inset-0.5 bg-n-8"
-                  style={{ clipPath: "url(#benefits)" }}
+                  className="absolute inset-0.5"
+                  style={{
+                    clipPath: "url(#benefits)",
+                    backgroundColor: theme.background,
+                  }}
                 >
                   <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
                     {item.imageUrl && (

@@ -1,8 +1,9 @@
-import './styles/index.css';
+
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react"; // Import ThemeProvider
 import { lightTheme, darkTheme } from "./components/theme"; // Import your themes
+import './styles/index.css';
 
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import Benefits from "./components/Benefits";

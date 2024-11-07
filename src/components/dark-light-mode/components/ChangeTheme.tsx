@@ -4,11 +4,11 @@ import { SunIcon } from './SunIcon';
 
 const ChangeTheme = ({ toggleTheme, currentTheme }) => {
   useEffect(() => {
-    // Toggle the "dark-theme" class on the body element based on the current theme
+    // Toggle `dark` class on the `body` element
     if (currentTheme === 'dark') {
-      document.body.classList.add('dark-theme');
+      document.body.classList.add('dark');
     } else {
-      document.body.classList.remove('dark-theme');
+      document.body.classList.remove('dark');
     }
   }, [currentTheme]);
 
@@ -17,7 +17,7 @@ const ChangeTheme = ({ toggleTheme, currentTheme }) => {
       aria-label="DarkModeToggle"
       type="button"
       onClick={toggleTheme}
-      className="fixed top-[3%] right-[3%] z-50 text-[2rem]"
+      className="fixed top-[3%] right-[20%] z-50 text-[2rem]"
     >
       {currentTheme === 'dark' ? <MoonIcon /> : <SunIcon />}
     </button>
