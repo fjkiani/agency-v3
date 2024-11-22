@@ -393,7 +393,7 @@ export const serviceContent = [
     title2: "Intelligent Learning Path Optimization",
     subtitle: "Edulga's AI agents continuously analyze learner performance, engagement patterns, and industry requirements to create dynamic, personalized learning experiences. These intelligent agents work in real-time to identify knowledge gaps, adjust difficulty levels, and recommend the most relevant content, ensuring each learner stays on an optimal path toward their career goals.",
     images: [
-      "/services/graph.png",
+      "/graph.png",
     ],
     useCases: [
       "Real-Time Learning Path Adaptation: Automatically adjusts content difficulty and topics based on learner progress and performance",
