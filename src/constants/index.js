@@ -380,7 +380,7 @@ export const serviceContent = [
     title2: "Unstructured data Framework",
     subtitle: "Edulga's Unstructured Framework allows the real-time handling of preprocessing unstructured data, transforming diverse educational content into structured, actionable knowledge. Our advanced NLP pipeline processes PDFs, videos, and presentations to extract key concepts, ensuring learners receive precisely curated content aligned with their learning goals and industry requirements.",
     images: [
-      "/src/assets/services/data-framework.png",
+      "/data-framework.png", // Updated path
     ],
     useCases: [
       "Ingest and preprocess unstructured educational content (PDFs, HTML, presentations) using NLP to extract key concepts and knowledge.",
@@ -393,7 +393,7 @@ export const serviceContent = [
     title2: "Intelligent Learning Path Optimization",
     subtitle: "Edulga's AI agents continuously analyze learner performance, engagement patterns, and industry requirements to create dynamic, personalized learning experiences. These intelligent agents work in real-time to identify knowledge gaps, adjust difficulty levels, and recommend the most relevant content, ensuring each learner stays on an optimal path toward their career goals.",
     images: [
-      "/src/assets/services/graph.png",
+      "/services/graph.png",
     ],
     useCases: [
       "Real-Time Learning Path Adaptation: Automatically adjusts content difficulty and topics based on learner progress and performance",
@@ -406,7 +406,7 @@ export const serviceContent = [
     title2: "Intelligent Knowledge Mapping & Real-Time Learning",
     subtitle: "Our advanced Knowledge Graph and RAG architecture creates a dynamic web of interconnected concepts, enabling precise, context-aware learning experiences. By combining vector-based search with graph relationships, we deliver personalized content that adapts to each learner's progress. This system continuously evolves, ensuring learners access the most relevant and up-to-date educational resources aligned with industry needs.",
     images: [
-      "/src/assets/services/roadmap.png",
+      "/roadmap.png",
     ],
     useCases: [
       "Dynamic Knowledge Navigation: Maps relationships between concepts across disciplines, helping learners understand connections and prerequisites",
