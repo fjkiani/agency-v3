@@ -58,7 +58,7 @@ export const navigation = [
   {
     id: "3",
     title: "Learning Hub",
-    url: "https://edulga-ai-course-generator.vercel.app/",
+    url: "https://edulga-roadmap-generator.vercel.app/",
   },
   {
     id: "4",
@@ -91,7 +91,7 @@ export const notificationImages = [notification4, notification3, notification2];
 // export const partnerLogos = [mastercard, sand, alx];
 
 export const companyLogos = [cohere, langchain, openai, anthropic, aws, neo4j, lambda, mc, sand, alx];
-export const backedBy = [alx, sand, mc]
+export const backedBy = [alx, sand]
 
 
 export const brainwaveServicesIcons = [
@@ -148,29 +148,29 @@ export const roadmap = [
 ];
 
 export const collabText1 =
-  "We partner with entrepreneurs, executives, and businesses to transform innovative ideas into fully functional, scalable software solutions and have the expertise to bring your vision to life.";
+  "AI-driven, real-time learning paths tailored to individual goals, skills, and the latest job market trends.";
 
 export const collabText2 =
-  "Offering full-stack development, seamless system integration, and cloud-based solutions, we provide everything you need to build, launch, and grow your business successfully.";
+  "Real-time insights into skill gaps and industry needs, enabling faster updates to curricula.";
 
 export const collabText3 =
-  "Our solutions are built to withstand economic downturns, ensuring that your technology remains robust and adaptable, keeping your business resilient and competitive, even in challenging market conditions";
+  "Match job requirements with learners who are trained in high-demand skills.";
 
 export const collabContent = [
   {
     id: "0",
-    title: "Regenerative social educational platform designed to accelerate global development in education and human capital.",
-    // text: collabText1,
+    title: "Hyper-Personalized Learning:",
+    text: collabText1,
   },
   {
     id: "1",
-    title: "Connects educators, students, institutions, industry partners, and learning service providers through “The Brain”",
-    // text: collabText2,
+    title: "Real-Time Curriculum Updates:",
+    text: collabText2,
   },
   {
     id: "2",
-    title: "An Instantaneously Updated Semantic Knowledge Web Powered by AI.",
-    // text: collabText3,
+    title: "Optimized Content Impact",
+    text: collabText3,
   },
   // {
   //   id: "3",
@@ -295,16 +295,16 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Human Knowledge Simulator",
-    text: "AI-driven platform that continuously adapts and simulates personalized learning experiences by integrating real-time global knowledge, enabling learners to stay aligned with the latest advancements and industry standards.",
+    title: "For Learners",
+    text: "Edulga aims to bridge the gap between learners and job-ready skills, potentially improving placement rates by 70%",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "1",
-    title: "Education Ecosystem Accelerator",
-    text: "Bridging the gap between education and the rapidly evolving job market by connecting learners, educators, and industry expert and accelerating development, knowledge and skills",
+    title: "For Institutions",
+    text: "Universities that implemented real-time skill gap analytics improved graduate job placements by up to 20%—Edulga is designed to deliver similar results",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -312,8 +312,8 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Knowledge as a Service",
-    text: "Providing on-demand access to a vast, continuously updated repository of global educational content, empowering learners and institutions to customize learning experiences and stay current with the latest industry and academic advancements.",
+    title: "For Employers",
+    text: "Edulga's skill-based learning recommendations are designed to reduce hiring costs by 30% and improve candidate alignment for critical roles",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
@@ -378,52 +378,42 @@ export const serviceContent = [
   {
     title: "Advance AI Data Engineering",
     title2: "Unstructured data Framework",
-    subtitle: "Edulga's Unstructured Framework allows the real-time handling of preprocessing unstructured data, converting it into a structured format that is usable for learning purposes across Large Language Models. This includes parsing and extracting relevant data (e.g., key concepts, courses, videos, pdf's) from each document type and convert it into content that can be fed into Edulga's The Brain",
-    // description: " By integrating the Unstructured Framework, embedding models, and LLM programming frameworks, Edulga can:",
-    video: "/videos/unstructured-2.mp4", // Updated path
+    subtitle: "Edulga's Unstructured Framework allows the real-time handling of preprocessing unstructured data, transforming diverse educational content into structured, actionable knowledge. Our advanced NLP pipeline processes PDFs, videos, and presentations to extract key concepts, ensuring learners receive precisely curated content aligned with their learning goals and industry requirements.",
+    images: [
+      "/src/assets/services/data-framework.png",
+    ],
     useCases: [
       "Ingest and preprocess unstructured educational content (PDFs, HTML, presentations) using NLP to extract key concepts and knowledge.",
       "Automatically structure unstructured data and feed it into the Knowledge Graph, ensuring real-time content delivery based on student queries.",
-      "Enable personalized and context-driven learning experiences by integrating processed data into Edulga’s adaptive LLM-powered learning pathways."
+      "Enable personalized and context-driven learning experiences by integrating processed data into Edulga's adaptive LLM-powered learning pathways."
     ],
   },
   {
-    title: "Edulga’s AI-Powered Agents: Enabling Personalized Learning at Scale",
-    title2: " Optimize Learning Paths Through Real-Time Adaptation",
-    subtitle: "Edulga integrates AI-powered agents into its learning platform to ensure that each student follows a learning path tailored to their progress, engagement, and knowledge gaps. These AI agents handle data gathering, performance analysis, and content retrieval, all while continuously refining the student’s path using intelligent feedback loops. With AI agents handling the complex task prioritization and resource management, Edulga provides an optimized, adaptive learning experience that scales globally.",
-    // description: "Edulga's AI agents dynamically adapt and personalize the learning experience for each student, continuously improving outcomes based on real-time data.",
-    video: "/videos/ai-agents.mp4", // some path
+    title: "AI-Powered Learning Agents",
+    title2: "Intelligent Learning Path Optimization",
+    subtitle: "Edulga's AI agents continuously analyze learner performance, engagement patterns, and industry requirements to create dynamic, personalized learning experiences. These intelligent agents work in real-time to identify knowledge gaps, adjust difficulty levels, and recommend the most relevant content, ensuring each learner stays on an optimal path toward their career goals.",
+    images: [
+      "/src/assets/services/graph.png",
+    ],
     useCases: [
-      "Real-Time Path Adjustment and update learning paths in real time",
-      "Prioritizing tasks based on difficulty, relevance, and student proficiency.",
-      "Personalized Content Delivery based on each student’s unique needs"
+      "Real-Time Learning Path Adaptation: Automatically adjusts content difficulty and topics based on learner progress and performance",
+      "Smart Task Prioritization: Uses AI to sequence learning materials based on prerequisite relationships and career relevance",
+      "Personalized Content Delivery: Matches learning resources with individual learning styles and career objectives"
     ],
   },
-  
   {
-    title: "Edulga's Knowledge Graph & RAG: Intelligent Learning Powered by Real-Time Contextual Retrieval",
-    title2: "Personalized Learning Through AI-Powered Knowledge Graphs",
-    subtitle:"Knowledge Graph & RAG architecture forms the core of its adaptive learning platform. Using intelligent agents to query vast databases of unstructured educational content, the system combines vector-based search and graph-based relationships to generate real-time, personalized learning experiences according to most relevant content, dynamically adjusted to their learning needs. This enables Edulga to continuously refine learning paths and deliver content that is both comprehensive and aligned with the learner's goals.",
-    // description: "Edulga Knowledge Graph & RAG system is central to providing an adaptive and personalized learning experience. Through intelligent agent interactions, students receive contextually enriched content that is continuously updated to match their progress.",
-    video: "/videos/graph-rag.mp4", // some path
+    title: "Knowledge Graph & Retrieval-Augmented Generation (RAG)",
+    title2: "Intelligent Knowledge Mapping & Real-Time Learning",
+    subtitle: "Our advanced Knowledge Graph and RAG architecture creates a dynamic web of interconnected concepts, enabling precise, context-aware learning experiences. By combining vector-based search with graph relationships, we deliver personalized content that adapts to each learner's progress. This system continuously evolves, ensuring learners access the most relevant and up-to-date educational resources aligned with industry needs.",
+    images: [
+      "/src/assets/services/roadmap.png",
+    ],
     useCases: [
-      "Adaptive Learning Path Updates that continuously updates the learner's content recommendations based on real-time performance",
-      "Enhanced Understanding Through Conceptual Relationships that helps identify and recommend related topics or subjects by linking foundational concepts across multiple disciplines."
-
+      "Dynamic Knowledge Navigation: Maps relationships between concepts across disciplines, helping learners understand connections and prerequisites",
+      "Contextual Learning Enhancement: Combines traditional course content with real-world applications and industry insights",
+      "Adaptive Content Delivery: Automatically updates learning materials based on industry trends and learner feedback"
     ],
   }
-  // {
-  //   title: "Machine Learning ROI Dashboard",
-  //   title2: "Return on Investment ",
-  //   subtitle: "Efficiently Track and Analyze Marketing Data",
-  //   description: "Machine Learning dashboard, built on Snowflake and visualized through Streamlit, transforms raw ad spend data into actionable insights to forecast future ROI resulting in 400%+ ROI.",
-  //   video: "/videos/HH.mp4", // Updated path
-  //   useCases: [
-  //     "Seamless integration of marketing data sources into Snowflake",
-  //     "Automated data cleansing and transformation for accurate analysis",
-  //     "Efficient management of marketing data pipelines for real-time insights",
-  //   ],
-  // },
 ];
 
 

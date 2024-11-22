@@ -3,20 +3,21 @@ import Slider from "react-slick";
 import { backedBy, companyLogos } from "../constants";
 import { StarsCanvas} from "../components/canvas";
 
-
-// Import the slick-carousel CSS files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const CompanyLogos = ({ className }) => {
-  // Slider settings
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Show 4 logos at a time
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: '60px',
     customPaging: (i) => (
       <div className="dot"></div>
     ),
@@ -25,41 +26,40 @@ const CompanyLogos = ({ className }) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          centerMode: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
+          centerMode: true,
         },
       },
     ],
   };
 
   return (
-    <div className={className}>
-      <h5 className="tagline mb-6 text-center text-n-1/50">
-      Backed By
-      </h5>
-      <Slider {...settings}>
-        {backedBy.map((logo, index) => (
-          <div key={index} className="p-2">
-            <li className="flex items-center justify-center h-[8.5rem]">
-              <img src={logo} width={134} height={28} alt={`Logo ${index + 1}`} />
-            </li>
-          </div>
-        ))}
-      </Slider>
+    <div className="relative py-16 bg-white dark:bg-transparent">
+      <div className={`container mx-auto ${className}`}>
+        <div className="px-4">
+          <Slider {...settings}>
+            {backedBy.map((logo, index) => (
+              <div key={index} className="px-8 py-4">
+        
+                <div className="flex items-center justify-center h-24 bg-transparent">
+                  <img 
+                    src={logo} 
+                    className="w-auto h-16 object-contain mx-auto" 
+                    alt={`Partner Logo ${index + 1}`}
+                  />
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
       <StarsCanvas/>
     </div>
   );

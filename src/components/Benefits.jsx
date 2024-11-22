@@ -52,8 +52,8 @@ const Benefits = () => {
     >
       <div className="container relative z-2">
         <Heading
-          className="md:max-w-md lg:max-w-2xl"
-          title="Imagine the world’s knowledge mapped in one environment that is accessible to all with learning pathways customized to each"
+          className="md:max-w-full lg:max-w-full"
+          title="87% of employers say graduates lack key skills needed for the job market. Edulga reimagining education by mapping the world's knowledge into personalized learning pathways."
         />
         <Slider {...settings}>
           {benefits.map((item) => (

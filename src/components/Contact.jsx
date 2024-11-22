@@ -88,36 +88,33 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-black dark:text-white font-medium mb-4'>Your Name</span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              // placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-white dark:bg-tertiary py-4 px-6 text-black dark:text-white rounded-lg outline-none border-2 border-gray-200 dark:border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+            <span className='text-black dark:text-white font-medium mb-4'>Your email</span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              // placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-white dark:bg-tertiary py-4 px-6 text-black dark:text-white rounded-lg outline-none border-2 border-gray-200 dark:border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>What are you looking to solve?</span>
+            <span className='text-black dark:text-white font-medium mb-4'>What are you looking to solve?</span>
             <textarea
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
-              // placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-white dark:bg-tertiary py-4 px-6 text-black dark:text-white rounded-lg outline-none border-2 border-gray-200 dark:border-none font-medium'
             />
           </label>
 

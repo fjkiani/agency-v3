@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Section from "./Section";
 import Heading from "./Heading";
 import { brainwaveServices, brainwaveServicesIcons, serviceContent, sliderSettings } from "../constants";
@@ -16,14 +18,27 @@ const Services = () => {
     setSelectedService(index);
   };
 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000
+  };
+
   return (
     <Section id="how-to-use">
       <div className="container">
-        <Heading title="Edulga aims to bridge the gaps between education and industry through a platform that offers real-time, personalized learning experiences " />
+        <Heading 
+          className="md:max-w-full lg:max-w-full"
+          title="Edulga aims to bridge the gaps between education and industry through a platform that offers real-time, personalized learning experiences" 
+        />
 
         <div className="py-12 px-4 xl:px-8">
           <h4 className="h4 mb-4">{serviceContent[selectedService].title}</h4>
-          <p className="body-2 mb-[2rem] text-n-3">
+          <p className="body-2 mb-4 text-gray-700 dark:text-white">
             {serviceContent[selectedService].subtitle}
           </p>
 
@@ -55,15 +70,17 @@ const Services = () => {
         <div className="relative">
           <div className="relative z-1 flex flex-col lg:flex-row items-center h-auto lg:h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
             <div className="relative h-[20rem] w-full lg:w-[65%] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
-              <video
-                className="w-full h-full object-cover"
-                src={serviceContent[selectedService].video}
-                controls
-                alt={serviceContent[selectedService].title}
-              />
-              {/* //change this message to the video */}
-              {/* <VideoChatMessage /> */}
-              {/* <VideoBar /> */}
+              <Slider {...sliderSettings}>
+                {serviceContent[selectedService].images.map((image, index) => (
+                  <div key={index} className="w-full h-full">
+                    <img 
+                      src={image}
+                      alt={`Slide ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </Slider>
             </div>
 
             <div className="relative z-1 max-w-[17rem] mt-8 lg:mt-0 lg:ml-8 lg:w-[35%]">

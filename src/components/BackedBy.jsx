@@ -14,7 +14,7 @@ const BackedBy = ({ className }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Show 4 logos at a time
+    slidesToShow: 2, // Show fewer logos at a time
     slidesToScroll: 1,
     arrows: true,
     customPaging: (i) => (
@@ -44,19 +44,27 @@ const BackedBy = ({ className }) => {
         },
       },
     ],
+    centerMode: true, // Enable center mode
+    centerPadding: '60px', // Add padding to center
   };
 
   return (
+
     <div className={className}>
-      <h5 className="tagline mb-6 text-center text-n-1/50">
+          <h2 className="text-center mb-4">Backed By</h2>
+      <h5 className="tagline mb-6 text-center text-n-1/50" style={{ color: 'rgb(0, 0, 0) !important' }}>
       Backed By
       </h5>
       <Slider {...settings}>
         {backedBy.map((logo, index) => (
-          <div key={index} className="p-2">
-            <li className="flex items-center justify-center h-[8.5rem]">
-              <img src={logo} width={134} height={28} alt={`Logo ${index + 1}`} />
-            </li>
+          <div key={index} className="px-8 py-4">
+            <div className="flex items-center justify-center h-24 bg-transparent">
+              <img 
+                src={logo} 
+                className="w-auto h-16 object-contain mx-auto"
+                alt={`Logo ${index + 1}`} 
+              />
+            </div>
           </div>
         ))}
       </Slider>

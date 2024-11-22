@@ -130,7 +130,16 @@ const Roadmap = () => {
       </div>
 
       <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
-        <Button href="/blog">View All Posts</Button>
+        <Button 
+          className="relative bg-transparent border-2 border-black dark:border-white"
+          href="/blog"
+          style={{ 
+            padding: '12px 24px',
+            color: 'black !important' // Force black color with !important
+          }}
+        >
+          <span style={{ color: 'black !important' }}>View All Posts</span>
+        </Button>
       </div>
     </Section>
   );
