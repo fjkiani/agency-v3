@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm install && vite build",
+    "build": "npm install --production=false && vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start": "serve -s dist -p $PORT"
@@ -42,7 +42,9 @@
     "scroll-lock": "^2.1.5",
     "slick-carousel": "^1.8.1",
     "three": "^0.167.1",
-    "serve": "^14.2.1"
+    "serve": "^14.2.1",
+    "range-parser": "^1.2.0",
+    "jquery": "^3.7.1"
   },
   "devDependencies": {
     "@types/node": "^22.5.0",
